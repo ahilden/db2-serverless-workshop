@@ -26,7 +26,7 @@ Questions before, during, or after the workshop? Reach out directly to either of
 >
 > **Db2 Serverless is a pre-GA (pre-General Availability) product.** What you are using today is an early access environment, not a production-hardened service. You may encounter rough edges, missing features, or unexpected behaviour.
 >
-> **Why are you here?** A primary goal of this workshop is to gather early user experience feedback from Db2 professionals like you. Your observations — what works well, what is confusing, what is missing — will directly shape the product before it reaches general availability. Please share feedback freely with Andrew and Jillian during and after the exercises.
+> **We need your help?** A primary goal of this workshop is to gather early user experience feedback from Db2 professionals like you. Your observations — what works well, what is confusing, what is missing — will directly shape the product before it reaches general availability. Please share feedback freely with Andrew and Jillian during and after the exercises.
 >
 > **Known limitations in this environment:**
 > - Some management and monitoring features are not yet available
