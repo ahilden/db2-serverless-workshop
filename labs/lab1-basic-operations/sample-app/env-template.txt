@@ -1,0 +1,16 @@
+# env-template.txt — variables expected in the .env file
+#
+# The actual .env file is created automatically by Lab 1 Exercise 1:
+# Bob uses the Db2 Serverless MCP server to provision your branch,
+# retrieves the connection credentials, and writes them to .env.
+#
+# You should NOT need to create or edit .env manually.
+# If you do need to create it manually, copy these lines to a file
+# named ".env" in this directory and fill in the values.
+
+DB2_HOSTNAME=your-db2-serverless-host.cloud.ibm.com
+DB2_PORT=50001
+DB2_DATABASE=BLUDB
+DB2_UID=your-ibmid@example.com
+DB2_PWD=your-ibmid-password
+DB2_SECURITY=SSL
