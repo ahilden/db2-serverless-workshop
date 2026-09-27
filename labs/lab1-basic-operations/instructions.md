@@ -31,8 +31,8 @@ The sample application is hosted on GitHub. Clone it and get it the first labs r
 > 💡 **Python and Pip** You will need to make sure you have a working python environment
 
 ```bash
-git clone https://github.com/andrewhildenibm-ops/idug-emea-db2serverless.git
-cd idug-emea-db2serverless/labs/lab1-basic-operations/sample-app
+git clone https://github.com/ahilden/db2-serverless-workshop.git
+cd db2-serverless-workshop/labs/lab1-basic-operations/sample-app
 pip install -r requirements.txt
 ```
 
