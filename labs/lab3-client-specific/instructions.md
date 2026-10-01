@@ -83,6 +83,16 @@ result-set handling — in seconds instead of hours.
 Build a **product catalog** Java application that connects directly to Db2 Serverless using the
 **IBM Db2 JCC JDBC driver** (`db2jcc4.jar`).
 
+### Required JVM Property
+
+The following system property must be set before opening a connection to Db2 Serverless:
+
+```
+db2.jcc.enableInetAddressGetHostName=true
+```
+
+This is set automatically by `Db2Connection.getConnection()` via `System.setProperty()`. Without it, the JCC driver may fail to resolve the hostname in environments where reverse DNS lookup is unavailable — which is typical of Db2 Serverless endpoints.
+
 ### Tasks
 
 **Step 1 — Provision the branch (MCP):**
@@ -98,6 +108,8 @@ Create a Java Maven application in the java-product-catalog/ directory that conn
 to IBM Db2 Serverless using the JCC JDBC driver. The application should:
 - Have a Db2Connection class reading DB2_HOSTNAME, DB2_PORT, DB2_DATABASE,
   DB2_UID, DB2_PWD from the .env file using a properties loader
+- Set the required JVM property `db2.jcc.enableInetAddressGetHostName=true` via
+  `System.setProperty()` in `Db2Connection.getConnection()` before opening a connection
 - Use this JDBC URL format:
   jdbc:db2://<host>:<port>/<database>:sslConnection=true;
 - Have a ProductCatalog class with:
@@ -117,8 +129,9 @@ to IBM Db2 Serverless using the JCC JDBC driver. The application should:
 ```
 Read the Db2Connection class and explain:
 1. How is SSL configured for Db2 Serverless in this JDBC URL?
-2. Why is try-with-resources important for JDBC connections?
-3. What would happen if we didn't close the ResultSet?
+2. Why is the db2.jcc.enableInetAddressGetHostName JVM property required for Db2 Serverless?
+3. Why is try-with-resources important for JDBC connections?
+4. What would happen if we didn't close the ResultSet?
 ```
 
 **Step 4 — Compile and create the schema:**
